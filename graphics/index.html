@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+  <h1 id="display"></h1>
+
+  <script>
+    (() => {
+      const test = nodecg.Replicant('test');
+      const display = document.getElementById('display');
+
+
+      test.on('change', newVal => {
+    		 display.innerHTML = newVal;
+      });
+    })();
+  </script>
+</body>
+</html>

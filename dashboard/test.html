@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+  <input type="text" id="display" value="test">
+  <script>
+    (() => {
+      const test = nodecg.Replicant('test');
+      let initialized = false;
+
+      const display = document.getElementById('display');
+
+      display.addEventListener('change', (e) => {
+        test.value = e.target.value;
+      });
+
+    })();
+  </script>
+</body>
+</html>
