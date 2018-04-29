@@ -23,6 +23,7 @@ class Graphics extends Component {
 
     return (
       <React.Fragment>
+        <img style={{width: 50}} src={`build${logo}`} alt=""/>
         <h1>{value}</h1>
       </React.Fragment>
     );
