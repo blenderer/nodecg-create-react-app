@@ -22,9 +22,9 @@ class Graphics extends Component {
     const { value } = this.state;
 
     return (
-      <div>
+      <React.Fragment>
         <h1>{value}</h1>
-      </div>
+      </React.Fragment>
     );
   }
 }
