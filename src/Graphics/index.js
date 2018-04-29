@@ -1,18 +1,32 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
-import '../App.css';
 
-class App extends Component {
+class Graphics extends Component {
+
+  replicant = window.nodecg.Replicant('test')
+  state = {
+    value: ''
+  }
+
+  componentDidMount() {
+    this.replicant.on('change', this.onUpdate);
+  }
+
+  onUpdate = (newVal) => {
+    this.setState({
+      value: newVal
+    });
+  }
+
   render() {
+    const { value } = this.state;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={`build${logo}`} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Graphics</h1>
-        </header>
+      <div>
+        <h1>{value}</h1>
       </div>
     );
   }
 }
 
-export default App;
+export default Graphics;
