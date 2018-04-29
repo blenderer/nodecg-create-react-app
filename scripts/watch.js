@@ -29,4 +29,15 @@ function copyPublicFolder() {
     dereference: true,
     filter: file => file !== paths.appHtml
   });
+
+  fs.copySync(paths.appBuild, paths.appBuild.replace(/build/, 'dashboard/build'), {
+    dereference: true,
+    filter: file => file !== paths.appHtml
+  });
+
+  fs.copySync(paths.appBuild, paths.appBuild.replace(/build/, 'graphics/build'), {
+    dereference: true,
+    filter: file => file !== paths.appHtml
+  });
+
 }
