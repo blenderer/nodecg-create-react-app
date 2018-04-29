@@ -4,6 +4,8 @@ bower_components
 
 # production
 /build
+/dashboard/build
+/graphics/build
 
 # misc
 .DS_Store
